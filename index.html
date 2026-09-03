@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competency Intelligence — AI Platform for India's Official Statistical System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================= TOAST ======================= -->
+<div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+
+<!-- ======================= PUBLIC SITE ======================= -->
+<div id="view-public" class="route active">
+
+  <nav class="pub-nav" id="pub-nav">
+    <div class="pub-nav-inner">
+      <a href="#" class="pub-brand" data-nav="landing-top">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="activity-square"></i></span>
+        <span class="brand-text">COMPETENCY<br><b>INTELLIGENCE</b></span>
+      </a>
+      <div class="pub-links">
+        <a href="#about">Overview</a>
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#compare">AI vs LMS</a>
+      </div>
+      <div class="pub-actions">
+        <button class="btn btn-ghost" id="btn-login-nav">Login</button>
+      </div>
+      <button class="hamburger" id="pub-hamburger" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
+  </nav>
+
+  <!-- ---- HERO ---- -->
+  <header class="hero" id="landing-top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-overlay"></div>
+      <div class="pulse-dot pd1"></div>
+      <div class="pulse-dot pd2"></div>
+      <div class="pulse-dot pd3"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> Official Statistical System · AI Capability Layer</div>
+        <h1>Turn Competency Gaps Into <span class="text-accent">Measurable Capability.</span></h1>
+        <p class="hero-sub">An AI-powered competency intelligence and personalized learning platform for India's Official Statistical System.</p>
+        <div class="hero-cta-row">
+          <button class="btn btn-primary btn-lg" id="btn-explore">Explore Platform <i data-lucide="arrow-right"></i></button>
+          <button class="btn btn-outline btn-lg" id="btn-how">How It Works</button>
+        </div>
+        <div class="hero-stats">
+          <div><span class="mono">12,450</span><label>Officers onboarded</label></div>
+          <div><span class="mono">27</span><label>Competency domains</label></div>
+          <div><span class="mono">9,840</span><label>Assessments run</label></div>
+        </div>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Platform intelligence cycle: Officer, Assessment, AI Analysis, Competency Gap, Personalized Learning, Reassessment, Improvement">
+        <div class="cycle-ring">
+          <div class="cycle-node cn1"><i data-lucide="user"></i><span>Officer</span></div>
+          <div class="cycle-node cn2"><i data-lucide="clipboard-check"></i><span>Assessment</span></div>
+          <div class="cycle-node cn3"><i data-lucide="brain-circuit"></i><span>AI Analysis</span></div>
+          <div class="cycle-node cn4"><i data-lucide="target"></i><span>Competency Gap</span></div>
+          <div class="cycle-node cn5"><i data-lucide="book-open-check"></i><span>Personalized Learning</span></div>
+          <div class="cycle-node cn6"><i data-lucide="refresh-cw"></i><span>Reassessment</span></div>
+          <div class="cycle-node cn7"><i data-lucide="trending-up"></i><span>Improvement</span></div>
+          <svg class="cycle-svg" viewBox="0 0 400 400"><circle cx="200" cy="200" r="164" class="cycle-track"/><circle cx="200" cy="200" r="164" class="cycle-progress" id="cycle-progress-ring"/></svg>
+          <div class="cycle-center"><span class="mono cycle-pct" id="cycle-center-pct">72%</span><label>Composite Readiness</label></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ---- ABOUT / OVERVIEW ---- -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="section-eyebrow">01 — Platform Overview</span>
+      <h2>Built for the statistical workforce, not a generic LMS.</h2>
+      <p class="section-sub">Officers and statisticians across the Official Statistical System operate under precise role-based competency requirements. This platform identifies role, measures actual capability, and closes the gap with evidence — not enrollment counts.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <i data-lucide="shield-check"></i>
+        <h3>Institutional by design</h3>
+        <p>Built to the trust, security and reliability standards expected of a government intelligence system — not a consumer learning app.</p>
+      </div>
+      <div class="about-card">
+        <i data-lucide="scan-search"></i>
+        <h3>Evidence-based competency</h3>
+        <p>Every competency score is derived from diagnostic assessment performance, never self-reported skill claims.</p>
+      </div>
+      <div class="about-card">
+        <i data-lucide="network"></i>
+        <h3>Connected to iGOT Karmayogi</h3>
+        <p>Competency gaps are mapped directly to relevant iGOT Karmayogi courses and CBPs for immediate action.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- HOW IT WORKS ---- -->
+  <section class="section section-alt" id="how">
+    <div class="section-head">
+      <span class="section-eyebrow">02 — How It Works</span>
+      <h2>Seven stages. One continuous capability loop.</h2>
+      <p class="section-sub">Every officer moves through the same disciplined cycle, powered by an underlying AI competency engine.</p>
+    </div>
+    <div class="process-rail" id="process-rail">
+      <div class="process-line" aria-hidden="true"></div>
+      <div class="process-step" data-step="1"><span class="p-num">01</span><i data-lucide="id-card"></i><h4>Identify Role</h4><p>Determine officer role &amp; required competency framework.</p></div>
+      <div class="process-step" data-step="2"><span class="p-num">02</span><i data-lucide="pencil-line"></i><h4>Assess</h4><p>Adaptive diagnostic assessment measures current knowledge.</p></div>
+      <div class="process-step" data-step="3"><span class="p-num">03</span><i data-lucide="cpu"></i><h4>Analyze</h4><p>AI engine scores performance against required competency levels.</p></div>
+      <div class="process-step" data-step="4"><span class="p-num">04</span><i data-lucide="target"></i><h4>Identify Gap</h4><p>Precise, ranked competency gaps are surfaced per officer.</p></div>
+      <div class="process-step" data-step="5"><span class="p-num">05</span><i data-lucide="route"></i><h4>Learn</h4><p>Personalized learning path &amp; iGOT resources generated.</p></div>
+      <div class="process-step" data-step="6"><span class="p-num">06</span><i data-lucide="repeat"></i><h4>Reassess</h4><p>RAG-generated AI assessment validates learning against source docs.</p></div>
+      <div class="process-step" data-step="7"><span class="p-num">07</span><i data-lucide="line-chart"></i><h4>Measure Improvement</h4><p>Improvement is tracked and reported at officer &amp; workforce level.</p></div>
+    </div>
+  </section>
+
+  <!-- ---- FEATURES ---- -->
+  <section class="section" id="features">
+    <div class="section-head">
+      <span class="section-eyebrow">03 — Features</span>
+      <h2>An analytical layer, not a course catalogue.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="target"></i></div>
+        <h3>Competency Intelligence</h3>
+        <p>Identify exactly where an officer needs improvement, mapped to role-specific competency frameworks.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="sliders-horizontal"></i></div>
+        <h3>Adaptive Assessment</h3>
+        <p>Assessment difficulty adjusts in real time according to performance on each competency.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="route"></i></div>
+        <h3>Personalized Learning</h3>
+        <p>Learning recommendations are generated from actual measured competency gaps, not browsing history.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="link-2"></i></div>
+        <h3>iGOT Integration</h3>
+        <p>Competency gaps are mapped to relevant iGOT Karmayogi learning resources and CBPs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="database-zap"></i></div>
+        <h3>RAG-Based AI Assessments</h3>
+        <p>Generate grounded MCQs from approved statistical documents using retrieval-augmented generation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon"><i data-lucide="bar-chart-3"></i></div>
+        <h3>Workforce Analytics</h3>
+        <p>Give administrators organization-wide competency intelligence across roles and departments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- COMPARISON ---- -->
+  <section class="section section-alt" id="compare">
+    <div class="section-head">
+      <span class="section-eyebrow">04 — The Difference</span>
+      <h2>Traditional LMS vs. AI Competency Platform</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-col compare-old">
+        <span class="compare-tag">TRADITIONAL LMS</span>
+        <div class="compare-flow">
+          <div class="cf-step">Browse Courses</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step">Choose Course</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step">Learn</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step">Complete</div>
+        </div>
+      </div>
+      <div class="compare-col compare-new">
+        <span class="compare-tag compare-tag-accent">AI COMPETENCY PLATFORM</span>
+        <div class="compare-flow">
+          <div class="cf-step cf-accent">Role</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">Diagnostic Assessment</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">AI Competency Analysis</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">Gap Identification</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">Personalized Learning</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">AI Assessment</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent">Reassessment</div>
+          <div class="cf-arrow">↓</div>
+          <div class="cf-step cf-accent cf-final">Competency Improvement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- AI LAYER ---- -->
+  <section class="section" id="ai-layer">
+    <div class="section-head">
+      <span class="section-eyebrow">05 — The AI Layer</span>
+      <h2>One engine, four coordinated capabilities.</h2>
+    </div>
+    <div class="ai-arch">
+      <div class="ai-core"><i data-lucide="brain-circuit"></i><span>AI ENGINE</span></div>
+      <div class="ai-branch ab1"><i data-lucide="target"></i><span>Competency Intelligence</span></div>
+      <div class="ai-branch ab2"><i data-lucide="sliders-horizontal"></i><span>Adaptive Assessment</span></div>
+      <div class="ai-branch ab3"><i data-lucide="database-zap"></i><span>RAG + LLM</span></div>
+      <div class="ai-branch ab4"><i data-lucide="route"></i><span>Recommendation Engine</span></div>
+      <svg class="ai-lines" viewBox="0 0 800 300"><path class="ai-line" d="M400,60 L150,220"/><path class="ai-line" d="M400,60 L316,220"/><path class="ai-line" d="M400,60 L484,220"/><path class="ai-line" d="M400,60 L650,220"/></svg>
+      <div class="ai-outputs">
+        <div class="ai-out">Skill Gap</div>
+        <div class="ai-out">AI Quiz</div>
+        <div class="ai-out">Learning Path</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- FINAL CTA ---- -->
+  <section class="final-cta">
+    <h2>Build a More Competent Statistical Workforce.</h2>
+    <button class="btn btn-primary btn-lg" id="btn-enter-platform">Enter Platform <i data-lucide="arrow-right"></i></button>
+  </section>
+
+  <footer class="pub-footer">
+    <div><span class="brand-mark"><i data-lucide="activity-square"></i></span> <b>AI-Driven Competency Intelligence</b></div>
+    <div>For India's Official Statistical System</div>
+  </footer>
+</div>
+
+<!-- ======================= LOGIN ======================= -->
+<div id="view-login" class="route">
+  <div class="login-shell">
+    <div class="login-left">
+      <div class="login-left-inner">
+        <span class="brand-mark lg"><i data-lucide="activity-square"></i></span>
+        <h2>Competency Intelligence</h2>
+        <p>AI-powered personalized learning for India's Official Statistical System.</p>
+        <div class="login-graph">
+          <svg viewBox="0 0 320 140">
+            <polyline class="lg-line" points="0,110 40,95 80,100 120,70 160,78 200,45 240,55 280,25 320,30"/>
+            <polyline class="lg-area" points="0,110 40,95 80,100 120,70 160,78 200,45 240,55 280,25 320,30 320,140 0,140"/>
+          </svg>
+          <div class="lg-caption"><span class="mono">+29%</span> average competency growth after learning path completion</div>
+        </div>
+      </div>
+    </div>
+    <div class="login-right">
+      <div class="login-card">
+        <button class="back-link" id="login-back"><i data-lucide="arrow-left"></i> Back to overview</button>
+        <h3>Sign in to your account</h3>
+        <p class="muted">Use your official credentials to continue.</p>
+        <form id="login-form">
+          <label class="field">
+            <span>Official Email / Employee ID</span>
+            <input type="text" id="login-id" placeholder="e.g. officer.sharma@mospi.gov.in" value="officer.sharma@mospi.gov.in">
+          </label>
+          <label class="field">
+            <span>Password</span>
+            <input type="password" id="login-pass" placeholder="••••••••" value="demo1234">
+          </label>
+          <div class="field-row">
+            <label class="checkbox"><input type="checkbox" checked> Remember this device</label>
+            <a href="#" class="link-sm" id="forgot-link">Forgot Password</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          <button type="button" class="btn btn-outline btn-block" id="btn-govid">
+            <i data-lucide="badge-check"></i> Sign in with Government Identity
+          </button>
+        </form>
+        <div class="login-foot">
+          <a href="#" class="link-sm" id="security-link"><i data-lucide="lock"></i> Security &amp; Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= ROLE SELECTION ======================= -->
+<div id="view-role" class="route">
+  <div class="role-shell">
+    <button class="back-link role-back" id="role-back"><i data-lucide="arrow-left"></i> Sign out</button>
+    <div class="role-head">
+      <h2>Welcome to your competency journey.</h2>
+      <p>Select your role to personalize your assessment and learning pathway.</p>
+    </div>
+    <div class="role-grid" id="role-grid"></div>
+  </div>
+</div>
+
+<!-- ======================= APP SHELL ======================= -->
+<div id="view-app" class="route">
+  <div class="app-shell" id="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <button class="sidebar-brand" id="sidebar-brand" title="Home">
+          <span class="brand-mark"><i data-lucide="activity-square"></i></span>
+          <span class="brand-text sb-text">COMPETENCY<br><b>INTELLIGENCE</b></span>
+        </button>
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Collapse sidebar"><i data-lucide="panel-left-close"></i></button>
+      </div>
+
+      <nav class="sidebar-nav" id="learner-nav">
+        <span class="nav-label sb-text">LEARNER</span>
+        <button class="nav-item" data-view="dashboard"><i data-lucide="layout-dashboard"></i><span class="sb-text">Dashboard</span></button>
+        <button class="nav-item" data-view="competencies"><i data-lucide="target"></i><span class="sb-text">My Competencies</span></button>
+        <button class="nav-item" data-view="assessment-intro"><i data-lucide="pencil-line"></i><span class="sb-text">Diagnostic Assessment</span></button>
+        <button class="nav-item" data-view="learning-path"><i data-lucide="route"></i><span class="sb-text">Learning Path</span></button>
+        <button class="nav-item" data-view="igot"><i data-lucide="link-2"></i><span class="sb-text">iGOT Recommendations</span></button>
+        <button class="nav-item" data-view="ai-assessment"><i data-lucide="sparkles"></i><span class="sb-text">AI Assessments</span></button>
+        <button class="nav-item" data-view="progress"><i data-lucide="line-chart"></i><span class="sb-text">Progress</span></button>
+      </nav>
+
+      <nav class="sidebar-nav" id="admin-nav">
+        <span class="nav-label sb-text">ADMINISTRATION</span>
+        <button class="nav-item" data-view="admin-dashboard"><i data-lucide="shield"></i><span class="sb-text">Workforce Analytics</span></button>
+        <button class="nav-item" data-view="admin-quiz"><i data-lucide="wand-2"></i><span class="sb-text">AI Quiz Generator</span></button>
+        <button class="nav-item" data-view="admin-kb"><i data-lucide="library-big"></i><span class="sb-text">Knowledge Base</span></button>
+        <button class="nav-item" data-view="admin-officers"><i data-lucide="users"></i><span class="sb-text">Officers</span></button>
+        <button class="nav-item" data-view="admin-reports"><i data-lucide="file-text"></i><span class="sb-text">Reports</span></button>
+        <button class="nav-item" data-view="admin-settings"><i data-lucide="settings"></i><span class="sb-text">Settings</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-view="profile" id="sidebar-profile-btn">
+          <span class="avatar sm">RS</span>
+          <span class="sb-text sidebar-user"><b id="sb-user-name">Officer Sharma</b><small id="sb-user-role">Data Collector</small></span>
+        </button>
+        <button class="nav-item nav-logout" id="btn-logout"><i data-lucide="log-out"></i><span class="sb-text">Logout</span></button>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="app-header">
+        <button class="hamburger app-hamburger" id="app-hamburger" aria-label="Menu"><i data-lucide="menu"></i></button>
+        <div class="breadcrumb" id="breadcrumb">Learner / Dashboard</div>
+        <div class="header-search">
+          <i data-lucide="search"></i>
+          <input type="text" id="global-search" placeholder="Search competencies, courses, officers...">
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="header-actions">
+          <span class="role-badge" id="role-badge">DATA COLLECTOR</span>
+          <button class="icon-btn" id="btn-ai-header" title="AI Assistant"><i data-lucide="sparkles"></i></button>
+          <button class="icon-btn" id="btn-notif" title="Notifications"><i data-lucide="bell"></i><span class="badge-dot" id="notif-dot"></span></button>
+          <div class="notif-panel" id="notif-panel"></div>
+          <button class="header-profile" id="btn-profile-menu">
+            <span class="avatar sm">RS</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="profile-menu" id="profile-menu">
+            <button data-view="profile"><i data-lucide="user"></i> My Profile</button>
+            <button id="pm-switch-role"><i data-lucide="repeat"></i> Switch Role</button>
+            <button id="pm-toggle-app"><i data-lucide="shield"></i> <span id="pm-toggle-label">Switch to Admin View</span></button>
+            <button id="pm-logout"><i data-lucide="log-out"></i> Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-content" id="app-content">
+        <!-- Views injected/managed here; static skeletons below, populated by JS -->
+
+        <section class="view" data-view="dashboard" id="v-dashboard"></section>
+        <section class="view" data-view="competencies" id="v-competencies"></section>
+        <section class="view" data-view="competency-detail" id="v-competency-detail"></section>
+        <section class="view" data-view="assessment-intro" id="v-assessment-intro"></section>
+        <section class="view" data-view="assessment" id="v-assessment"></section>
+        <section class="view" data-view="assessment-result" id="v-assessment-result"></section>
+        <section class="view" data-view="learning-path" id="v-learning-path"></section>
+        <section class="view" data-view="igot" id="v-igot"></section>
+        <section class="view" data-view="ai-assessment" id="v-ai-assessment"></section>
+        <section class="view" data-view="progress" id="v-progress"></section>
+        <section class="view" data-view="profile" id="v-profile"></section>
+
+        <section class="view" data-view="admin-dashboard" id="v-admin-dashboard"></section>
+        <section class="view" data-view="admin-quiz" id="v-admin-quiz"></section>
+        <section class="view" data-view="admin-kb" id="v-admin-kb"></section>
+        <section class="view" data-view="admin-officers" id="v-admin-officers"></section>
+        <section class="view" data-view="admin-officer-detail" id="v-admin-officer-detail"></section>
+        <section class="view" data-view="admin-reports" id="v-admin-reports"></section>
+        <section class="view" data-view="admin-settings" id="v-admin-settings"></section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Floating AI Assistant -->
+  <button class="ai-fab" id="ai-fab" aria-label="Open AI Assistant"><i data-lucide="sparkles"></i></button>
+  <div class="ai-panel" id="ai-panel">
+    <div class="ai-panel-head">
+      <div><i data-lucide="brain-circuit"></i> <b>Competency AI</b></div>
+      <button id="ai-panel-close"><i data-lucide="x"></i></button>
+    </div>
+    <div class="ai-panel-body" id="ai-panel-body"></div>
+    <div class="ai-suggested" id="ai-suggested"></div>
+    <form class="ai-panel-input" id="ai-panel-form">
+      <input type="text" id="ai-panel-text" placeholder="Ask about your competencies...">
+      <button type="submit"><i data-lucide="send"></i></button>
+    </form>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal" id="modal"><div class="modal-inner" id="modal-inner"></div></div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
